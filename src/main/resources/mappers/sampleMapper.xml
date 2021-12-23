@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="encore">
+ 	<select id="selectBbsList" resultType="bbs_vo">
+ 		SELECT
+ 			SEQ
+ 			, SUBJECT
+ 			, CONTENT
+ 			, WRITER
+ 			, TO_CHAR(REGDATE, 'YYYY-MM-DD') REGDATE
+ 			, VIEWCNT
+ 			FROM BBS_TBL
+ 	</select>
+</mapper>
